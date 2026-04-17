@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Link } from 'react-router';
 import MyLink from './MyLink';
 const Navbar = () => {
     return (
@@ -28,7 +28,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end gap-3">
                 <img className='w-10 rounded-full' src="https://i.ibb.co.com/4QsnQX3/user-icon-vector-1272330-86.jpg" alt="profile photo" />
-                <a className="btn bg-[#FFD93D]">Login</a>
+                <Link to={'/auth/login'}><button className='btn bg-[#FFD93D]'>login</button></Link>
             </div>
         </div>
     );
