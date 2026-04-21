@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from '../Components/Navbar';
 import { Outlet } from 'react-router';
 
-console.log('this is homelayout')
 const HomeLayout = () => {
 
     return (
