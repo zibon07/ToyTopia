@@ -2,18 +2,17 @@ import React, { use } from 'react';
 import { Link } from 'react-router';
 import MyLink from './MyLink';
 import { AuthContext } from '../Provider/AuthProvider';
-import { signOut } from 'firebase/auth';
-import { auth } from '../Firebase/firebase.config';
+import { toast } from 'react-toastify';
 const Navbar = () => {
     const { user, logOut } = use(AuthContext);
     const handleLogOut = () => {
         // console.log("user trying to logout");
         logOut()
             .then(() => {
-                alert('sign Out successful')
+                toast.success('sign out successful')
             })
             .cath(() => {
-                alert('sign Out unsuccessful')
+                toast.success('sign Out unsuccessful')
             })
 
     }
