@@ -17,7 +17,7 @@ const Login = () => {
             })
             .catch(error => {
                 const errorMessage = error.message;
-                // toast.error(errorMessage)
+                toast.error(errorMessage)
             })
     }
     const handleLogIn = (e) => {
