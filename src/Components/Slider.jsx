@@ -66,9 +66,7 @@ const Slider = ({ toys = [] }) => {
 
                             <p>⭐ 4.7</p>
 
-                            <button className="bg-[#FFD93D] px-4 py-2 rounded-lg mt-3">
-                                View More
-                            </button>
+
                         </div>
                     </SwiperSlide>)
                 }
