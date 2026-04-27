@@ -10,30 +10,31 @@ import AuthLayout from "../Layouts/AuthLayout";
 const router = createBrowserRouter(
     [
         {
-            path:"/",
-            Component:HomeLayout,
-            children:[
+            path: "/",
+            Component: HomeLayout,
+            children: [
                 {
-                    index:true,
-                    Component:Home
+                    index: true,
+                    Component: Home,
+                    loader: () => fetch('./ToyData.json')
                 },
                 {
-                    path:"/profile",
-                    Component:Profile
+                    path: "/profile",
+                    Component: Profile
                 }
             ]
         },
         {
-            path:"/auth",
-            Component:AuthLayout,
-            children:[
+            path: "/auth",
+            Component: AuthLayout,
+            children: [
                 {
-                    path:'/auth/login',
-                    Component:Login
+                    path: '/auth/login',
+                    Component: Login
                 },
                 {
-                    path:'/auth/register',
-                    Component:Register
+                    path: '/auth/register',
+                    Component: Register
                 }
             ]
         },

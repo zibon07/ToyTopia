@@ -13,3 +13,9 @@
   --color-card: #4FAFBC;
 
 }
+
+;
+
+.swiper-pagination .swiper-pagination-clickable .swiper-pagination-bullets .swiper-pagination-horizontal {
+  bottom: 0px !important;
+}
