@@ -6,6 +6,7 @@ import Home from "../Components/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import AuthLayout from "../Layouts/AuthLayout";
+import ToyDetails from "../Components/ToyDetails";
 
 const router = createBrowserRouter(
     [
@@ -21,6 +22,10 @@ const router = createBrowserRouter(
                 {
                     path: "/profile",
                     Component: Profile
+                },
+                {
+                    path:"/toyDetails/:id",
+                    Component:ToyDetails
                 }
             ]
         },

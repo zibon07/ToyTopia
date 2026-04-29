@@ -4,8 +4,8 @@ import 'swiper/css/bundle';
 import 'swiper/css/pagination';
 import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules';
 
-const Slider = ({ toys = [] }) => {
-    console.log(toys)
+const Slider = ({ toys }) => {
+    // console.log(toys)
     const paginationRef = useRef(null);
     const [active, SetActive] = useState('')
 
@@ -53,7 +53,7 @@ const Slider = ({ toys = [] }) => {
                 className="mySwiper">
 
                 {
-                    toys?.map(toy => <SwiperSlide key={toy.toyId}>
+                    toys.map(toy => <SwiperSlide key={toy.toyId}>
                         <div className="bg-white rounded-xl shadow-lg p-5 text-center">
                             <img
                                 src={toy.pictureURL}
@@ -62,9 +62,9 @@ const Slider = ({ toys = [] }) => {
 
                             <h2 className="text-xl font-bold mt-3">{toy.toyName}</h2>
 
-                            <p>$49.99</p>
+                            <p>$ {toy.price}</p>
 
-                            <p>⭐ 4.7</p>
+                            <p>⭐ {toy.rating}</p>
 
 
                         </div>
