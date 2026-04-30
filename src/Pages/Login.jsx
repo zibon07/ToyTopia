@@ -1,5 +1,5 @@
 import React, { use, useState } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { toast } from 'react-toastify';
@@ -7,6 +7,9 @@ import { toast } from 'react-toastify';
 const Login = () => {
     const { logIn, GoogleSignUp, setUser } = use(AuthContext);
     const [show, setShow] = useState(false);
+    const location = useLocation();
+    // console.log(location)
+    const navigate = useNavigate();
 
     const handleGoogleSignIn = () => {
         GoogleSignUp()
@@ -14,6 +17,7 @@ const Login = () => {
                 const user = result.user;
                 setUser(user)
                 toast.success("sign in successful")
+                navigate(`${location.state ? location.state : "/"}`)
             })
             .catch(error => {
                 const errorMessage = error.message;
@@ -24,12 +28,13 @@ const Login = () => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log({ email, password })
+        // console.log({ email, password })
         logIn(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user)
                 toast.success('Login Successful')
+                navigate(`${location.state ? location.state : "/"}`)
 
             })
             .catch(error => {

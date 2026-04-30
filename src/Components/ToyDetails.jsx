@@ -5,9 +5,9 @@ const ToyDetails = () => {
     const { id } = useParams();
     // console.log(id)
     const toys = useLoaderData();
-    console.log(toys);
+    // console.log(toys);
     const filteredToy = toys.find(toy => toy.toyId == id);
-    console.log(filteredToy)
+    // console.log(filteredToy)
     return (
         <div className="min-h-screen py-12 px-6 bg-[#00BFA5]">
 
