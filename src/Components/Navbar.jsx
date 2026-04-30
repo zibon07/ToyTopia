@@ -26,14 +26,14 @@ const Navbar = () => {
                     <ul
 
                         tabIndex="-1"
-                        className="menu  menu-sm dropdown-content bg-[#FFFFFF] rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        className="menu z-50 menu-sm dropdown-content bg-[#FFFFFF] rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <li><MyLink to={'/'}>Home</MyLink></li>
                         <li><MyLink to={'/profile'}>My-Profile</MyLink></li>
                     </ul>
                 </div>
                 <a className="text-3xl text-[#FFD93D] font-bold">ToyTopia</a>
             </div>
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-center hidden  lg:flex">
                 <ul className="menu  menu-horizontal px-1">
                     <li><MyLink to={'/'}>Home</MyLink></li>
                     <li><MyLink to={'/profile'}>My-Profile</MyLink></li>

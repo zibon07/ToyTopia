@@ -7,6 +7,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import AuthLayout from "../Layouts/AuthLayout";
 import ToyDetails from "../Components/ToyDetails";
+import PrivateRoute from "../Provider/PrivateRoute";
 
 const router = createBrowserRouter(
     [
@@ -25,7 +26,9 @@ const router = createBrowserRouter(
                 },
                 {
                     path: "/toyDetails/:id",
-                    Component: ToyDetails,
+                    element: <PrivateRoute>
+                        <ToyDetails></ToyDetails>
+                    </PrivateRoute>,
                     loader: () => fetch('../ToyData.json')
                 }
             ]

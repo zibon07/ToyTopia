@@ -89,8 +89,8 @@ const Register = () => {
                                 <span onClick={() => setShow(!show)} className='absolute right-7 top-7 cursor-pointer text-lg'>
 
                                     {
-                                        show ? <FaEyeSlash /> :
-                                            <FaEye />
+                                        show ? <FaEye /> :
+                                            <FaEyeSlash />
                                     }
 
                                 </span>

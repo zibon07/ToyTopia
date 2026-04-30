@@ -29,6 +29,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                toast.success('Login Successful')
 
             })
             .catch(error => {
@@ -62,8 +63,8 @@ const Login = () => {
                                 <span onClick={() => setShow(!show)} className='absolute right-7 top-7 cursor-pointer text-lg'>
 
                                     {
-                                        show ? <FaEyeSlash /> :
-                                            <FaEye />
+                                        show ? <FaEye /> :
+                                            <FaEyeSlash />
                                     }
 
                                 </span>
