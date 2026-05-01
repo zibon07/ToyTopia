@@ -29,6 +29,10 @@ const Navbar = () => {
                         className="menu z-50 menu-sm dropdown-content bg-[#FFFFFF] rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <li><MyLink to={'/'}>Home</MyLink></li>
                         <li><MyLink to={'/profile'}>My-Profile</MyLink></li>
+                        {
+                            user && <li><MyLink to={'/addToy'}>Add-Toy</MyLink></li>
+                        }
+
                     </ul>
                 </div>
                 <a className="text-3xl text-[#FFD93D] font-bold">ToyTopia</a>
@@ -37,6 +41,9 @@ const Navbar = () => {
                 <ul className="menu  menu-horizontal px-1">
                     <li><MyLink to={'/'}>Home</MyLink></li>
                     <li><MyLink to={'/profile'}>My-Profile</MyLink></li>
+                    {
+                        user && <li><MyLink to={'/addToy'}>Add-Toy</MyLink></li>
+                    }
 
                 </ul>
             </div>

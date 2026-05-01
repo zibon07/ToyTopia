@@ -9,6 +9,7 @@ import AuthLayout from "../Layouts/AuthLayout";
 import ToyDetails from "../Components/ToyDetails";
 import PrivateRoute from "../Provider/PrivateRoute";
 import ErrorPage from "../Pages/ErrorPage";
+import AddToy from "../Pages/AddToy";
 
 
 const router = createBrowserRouter(
@@ -31,6 +32,13 @@ const router = createBrowserRouter(
                     path: "/toyDetails/:id",
                     element: <PrivateRoute>
                         <ToyDetails></ToyDetails>
+                    </PrivateRoute>,
+                    loader: () => fetch('../ToyData.json')
+                },
+                {
+                    path: "/addToy",
+                    element: <PrivateRoute>
+                        <AddToy></AddToy>
                     </PrivateRoute>,
                     loader: () => fetch('../ToyData.json')
                 }
