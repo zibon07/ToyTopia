@@ -1,12 +1,13 @@
-import React, { use, useState } from 'react';
+import React, { use, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 
 const Login = () => {
-    const { logIn, GoogleSignUp, setUser } = use(AuthContext);
+    const { logIn, GoogleSignUp, setUser, forgetPassword } = use(AuthContext);
     const [show, setShow] = useState(false);
+    const emailRef = useRef(null)
     const location = useLocation();
     // console.log(location)
     const navigate = useNavigate();
@@ -44,6 +45,16 @@ const Login = () => {
                 console.log(errorCode, errorMessage);
             })
     }
+    const handleForgetPassword = () => {
+        const email = emailRef.current.value;
+        console.log(email);
+        forgetPassword(email).then(()=>{
+            toast.success('Check your email to reset Password')
+        })
+        .catch((e)=>{
+            toast.error(e.message)
+        })
+    }
     return (
         <div className='flex justify-center p-10'>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -56,7 +67,8 @@ const Login = () => {
                                 type="email"
                                 className="input"
                                 placeholder="Email"
-                                name='email' />
+                                name='email'
+                                ref={emailRef} />
                             {/* Password */}
                             <div className='relative'>
                                 <label className="label">Password</label>
@@ -76,7 +88,8 @@ const Login = () => {
                             </div>
 
 
-                            <div><a className="link link-hover className='underline text-teal-500">Forgot password?</a></div>
+                            <div><a
+                                onClick={handleForgetPassword} className="link link-hover className='underline text-teal-500">Forgot password?</a></div>
                             <button
                                 type='submit'
                                 className="btn btn-neutral mt-4">Login</button>

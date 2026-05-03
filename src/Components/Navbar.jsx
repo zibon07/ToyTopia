@@ -11,7 +11,7 @@ const Navbar = () => {
             .then(() => {
                 toast.success('sign out successful')
             })
-            .cath(() => {
+            .catch(() => {
                 toast.success('sign Out unsuccessful')
             })
 

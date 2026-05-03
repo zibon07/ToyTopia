@@ -12,7 +12,7 @@ const Profile = () => {
         e.preventDefault()
         const name = e.target.name.value;
         const photo = e.target.photo.value;
-        console.log(name, photo);
+        // console.log(name, photo);
         updateUser({
             displayName: name,
             photoURL: photo
@@ -38,8 +38,8 @@ const Profile = () => {
                         alt="profile"
                         className="w-24 h-24 rounded-full object-cover border-4 border-[#FFD93D] shadow"
                     />
-                    <h2 className="text-2xl font-bold text-gray-800">{user.displayName}</h2>
-                    <p className="text-gray-400 text-sm">{user.email}</p>
+                    <h2 className="text-2xl font-bold text-gray-800">{user?.displayName}</h2>
+                    <p className="text-gray-400 text-sm">{user?.email}</p>
                     <span className="bg-[#FFD93D] text-gray-800 text-xs font-bold px-3 py-1 rounded-full">
                         🧸 Toy Seller
                     </span>
