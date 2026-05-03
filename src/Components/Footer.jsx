@@ -14,16 +14,16 @@ const Footer = () => {
                 <div className="flex flex-col gap-3">
                     <h3 className="font-bold text-[#FFD93D] text-base">Quick Links</h3>
                     <Link to="/" className="text-white/70 hover:text-[#FFD93D] text-sm transition-colors">🏠 Home</Link>
-                    <Link to="/my-profile" className="text-white/70 hover:text-[#FFD93D] text-sm transition-colors">👤 My Profile</Link>
-                    <Link to="/all-toys" className="text-white/70 hover:text-[#FFD93D] text-sm transition-colors">🧸 All Toys</Link>
-                    <Link to="/login" className="text-white/70 hover:text-[#FFD93D] text-sm transition-colors">🔐 Login</Link>
+                    <Link to="/profile" className="text-white/70 hover:text-[#FFD93D] text-sm transition-colors">👤 My Profile</Link>
+                    <Link to="/" className="text-white/70 hover:text-[#FFD93D] text-sm transition-colors">🧸 All Toys</Link>
+                    <Link to="/auth/login" className="text-white/70 hover:text-[#FFD93D] text-sm transition-colors">🔐 Login</Link>
                 </div>
                 <div className="flex flex-col gap-3">
                     <h3 className="font-bold text-[#FFD93D] text-base">Legal</h3>
-                    <Link to="/terms" className="text-white/70 hover:text-[#FFD93D] text-sm transition-colors">📄 Terms & Conditions</Link>
-                    <Link to="/privacy" className="text-white/70 hover:text-[#FFD93D] text-sm transition-colors">🔒 Privacy Policy</Link>
-                    <Link to="/refund" className="text-white/70 hover:text-[#FFD93D] text-sm transition-colors">🔄 Refund Policy</Link>
-                    <Link to="/faq" className="text-white/70 hover:text-[#FFD93D] text-sm transition-colors">❓ FAQ</Link>
+                    <Link className="text-white/70 hover:text-[#FFD93D] text-sm transition-colors">📄 Terms & Conditions</Link>
+                    <Link className="text-white/70 hover:text-[#FFD93D] text-sm transition-colors">🔒 Privacy Policy</Link>
+                    <Link className="text-white/70 hover:text-[#FFD93D] text-sm transition-colors">🔄 Refund Policy</Link>
+                    <Link className="text-white/70 hover:text-[#FFD93D] text-sm transition-colors">❓ FAQ</Link>
                 </div>
                 <div className="flex flex-col gap-3">
                     <h3 className="font-bold text-[#FFD93D] text-base">Follow Us</h3>
@@ -37,9 +37,9 @@ const Footer = () => {
             <div className="max-w-6xl mx-auto border-t border-white/20 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
                 <p className="text-white/50 text-xs">© 2026 ToyTopia. All rights reserved.</p>
                 <div className="flex gap-4">
-                    <Link to="/terms" className="text-white/50 hover:text-[#FFD93D] text-xs transition-colors">Terms</Link>
-                    <Link to="/privacy" className="text-white/50 hover:text-[#FFD93D] text-xs transition-colors">Privacy</Link>
-                    <Link to="/refund" className="text-white/50 hover:text-[#FFD93D] text-xs transition-colors">Refund</Link>
+                    <Link className="text-white/50 hover:text-[#FFD93D] text-xs transition-colors">Terms</Link>
+                    <Link className="text-white/50 hover:text-[#FFD93D] text-xs transition-colors">Privacy</Link>
+                    <Link className="text-white/50 hover:text-[#FFD93D] text-xs transition-colors">Refund</Link>
                 </div>
             </div>
         </div>

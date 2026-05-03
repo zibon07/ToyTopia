@@ -16,6 +16,7 @@ const Navbar = () => {
             })
 
     }
+    // console.log(user.photoURL)
     return (
         <div className="navbar  shadow-sm">
             <div className="navbar-start">
@@ -50,7 +51,7 @@ const Navbar = () => {
             {
                 user ?
                     <div className="navbar-end gap-3">
-                        <img className='w-10 rounded-full' src="https://i.ibb.co.com/4QsnQX3/user-icon-vector-1272330-86.jpg" alt="profile photo" />
+                        <img className='w-10 rounded-full' src={user.photoURl} alt="profile photo" title={user.displayName} />
                         <Link><button onClick={handleLogOut} className='btn bg-[#FFD93D]'>LogOut</button></Link>
                     </div>
                     :

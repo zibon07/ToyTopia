@@ -5,7 +5,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';
 
 const Register = () => {
-    const { createUser, setUser, GoogleSignUp } = use(AuthContext);
+    const { createUser, setUser, GoogleSignUp, updateUser } = use(AuthContext);
     const [show, setShow] = useState(false);
     const handleGoogleSignIn = () => {
         GoogleSignUp()
@@ -22,8 +22,8 @@ const Register = () => {
     }
     const handleSignUp = (e) => {
         e.preventDefault()
-        // const name = e.target.name.value;
-        // const photo = e.target.photo.value;
+        const name = e.target.name.value;
+        const photo = e.target.photo.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         // console.log(name, photo, email, password);
@@ -36,8 +36,22 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                setUser(user)
-                console.log(user);
+
+                updateUser({
+                    displayName: name,
+                    photoURL: photo
+                }).then(() => {
+                    setUser({
+                        ...user,
+                        displayName: name,
+                        photoURL: photo
+                    });
+                }).catch((error) => {
+                    console.log(error)
+                    setUser(user);
+                })
+
+                // console.log(user);
             })
             .catch(error => {
                 const errorCode = error.code;

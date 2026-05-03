@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from '../Firebase/firebase.config';
 // eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext()
@@ -38,6 +38,10 @@ const AuthProvider = ({ children }) => {
 
         }
     }, [])
+
+    const updateUser = (updatedData) => {
+        return updateProfile(auth.currentUser, updatedData)
+    }
     const AuthData = {
         user,
         setUser,
@@ -46,7 +50,8 @@ const AuthProvider = ({ children }) => {
         logIn,
         logOut,
         loading,
-        setLoading
+        setLoading,
+        updateUser
     }
     return <AuthContext value={AuthData}>
         {children}
