@@ -3,7 +3,7 @@
 ## Purpose
 ToyTopia is a toy marketplace where users can browse, explore, and list toys for sale. It features category filtering, a toy slider, detailed toy pages, and secure user authentication.
 
-## 🔗 Live URL
+## 🔗 Live URL : https://toytopia-3142e.web.app/
 
 
 ## ✨ Key Features
