@@ -22,8 +22,8 @@ const Profile = () => {
                 displayName: name,
                 photoURL: photo
             });
-        }).catch((error) => {
-            console.log(error)
+        }).catch(() => {
+            // console.log(error)
             setUser(user);
         })
         e.target.reset()

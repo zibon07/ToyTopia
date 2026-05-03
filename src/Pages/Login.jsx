@@ -31,9 +31,9 @@ const Login = () => {
         const password = e.target.password.value;
         // console.log({ email, password })
         logIn(email, password)
-            .then(result => {
-                const user = result.user;
-                console.log(user)
+            .then(() => {
+                // const user = result.user;
+                // console.log(user)
                 toast.success('Login Successful')
                 navigate(`${location.state ? location.state : "/"}`)
 
@@ -42,7 +42,7 @@ const Login = () => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 toast.error(errorCode, errorMessage)
-                console.log(errorCode, errorMessage);
+                // console.log(errorCode, errorMessage);
             })
     }
     const handleForgetPassword = () => {
