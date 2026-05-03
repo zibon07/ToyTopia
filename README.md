@@ -1,16 +1,36 @@
-# React + Vite
+# 🧸 ToyTopia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Purpose
+ToyTopia is a toy marketplace where users can browse, explore, and list toys for sale. It features category filtering, a toy slider, detailed toy pages, and secure user authentication.
 
-Currently, two official plugins are available:
+## 🔗 Live URL
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## ✨ Key Features
+- 🔐 Email/Password and Google Authentication (Firebase)
+- 🧸 Browse toys with an interactive slider
+- 📂 Filter toys by category
+- 📄 Detailed toy page with seller info
+- ➕ Add new toys (protected route)
+- 👤 User profile with editable name and photo
+- 📱 Fully responsive design
+- 🔒 Private/protected routes for logged-in users
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 NPM Packages Used
+- react
+- react-router
+- firebase
+- swiper
+- tailwindcss
+- daisyui
+- react-icons
+- react-toastify
 
-## Expanding the ESLint configuration
+## 🚀 How to Run Locally
+```bash
+git clone https://github.com/your-username/toytopia.git
+cd toytopia
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

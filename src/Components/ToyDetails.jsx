@@ -10,7 +10,7 @@ const ToyDetails = () => {
     // console.log(filteredToy)
     return (
         <div className="min-h-screen py-12 px-6 bg-[#00BFA5]">
-
+            <title>ToyTopia - Toy Details</title>
             <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
 
 

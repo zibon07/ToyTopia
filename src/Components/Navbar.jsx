@@ -27,7 +27,7 @@ const Navbar = () => {
                     <ul
 
                         tabIndex="-1"
-                        className="menu z-50 menu-sm dropdown-content bg-[#FFFFFF] rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        className="menu z-50 menu-sm dropdown-content bg-[#FFFFFF] rounded-box mt-3 w-52 p-2 shadow">
                         <li><MyLink to={'/'}>Home</MyLink></li>
                         <li><MyLink to={'/profile'}>My-Profile</MyLink></li>
                         {

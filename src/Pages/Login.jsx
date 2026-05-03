@@ -48,15 +48,16 @@ const Login = () => {
     const handleForgetPassword = () => {
         const email = emailRef.current.value;
         console.log(email);
-        forgetPassword(email).then(()=>{
+        forgetPassword(email).then(() => {
             toast.success('Check your email to reset Password')
         })
-        .catch((e)=>{
-            toast.error(e.message)
-        })
+            .catch((e) => {
+                toast.error(e.message)
+            })
     }
     return (
         <div className='flex justify-center p-10'>
+            <title>ToyTopia - Login</title>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <div className="card-body">
                     <form onSubmit={handleLogIn}>

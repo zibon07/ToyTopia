@@ -30,6 +30,7 @@ const Profile = () => {
     }
     return (
         <div className="bg-[#00BFA5] min-h-screen py-12 px-6">
+            <title>ToyTopia - My Profile</title>
             <div className="max-w-2xl mx-auto flex flex-col gap-6">
 
                 <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center gap-4">

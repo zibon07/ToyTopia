@@ -3,6 +3,7 @@ import React from 'react';
 const AddToy = () => {
     return (
         <div className="bg-[#00BFA5] min-h-screen py-12 px-6">
+            <title>ToyTopia - Add Toy</title>
             <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-8">
 
                 <div className="text-center mb-8">

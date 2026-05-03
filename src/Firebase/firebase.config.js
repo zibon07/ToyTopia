@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCPXFWQq9WPxJ1fdLTCN7LKnOuJVP4vfaQ",
-    authDomain: "toytopia-3142e.firebaseapp.com",
-    projectId: "toytopia-3142e",
-    storageBucket: "toytopia-3142e.firebasestorage.app",
-    messagingSenderId: "172926325203",
-    appId: "1:172926325203:web:1112fae8a9f9f903929f26"
+    apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
 };
 
 // Initialize Firebase
